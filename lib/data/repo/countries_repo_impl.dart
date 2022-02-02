@@ -11,7 +11,7 @@ import 'package:dartz/dartz.dart';
 import 'package:graphql/client.dart';
 
 class CountriesRepositoryImpl implements CountriesRepository {
-  // TODO Should be injected
+  /// Should be injected
   final CountriesQuery _countriesQuery =
       CountriesQuery(GqlClient.instance.client);
   final ContinentsQuery _continentsQuery =

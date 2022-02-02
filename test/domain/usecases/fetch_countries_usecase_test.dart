@@ -21,20 +21,39 @@ void main() {
     useCase = FetchCountriesUseCase(globalState, repo);
   });
 
-  test(
-    'When $FetchCountriesUseCase is called and repo returns a valid response '
-    'then the expected list is returned',
-    () async {
-      // arrange
-      Either<Failure, List<Country>> mockResponse = Right(mockCountryList);
-      when(repo.getCountryList()).thenAnswer((_) async => mockResponse);
+  group('$FetchCountriesUseCase tests', () {
+    test(
+      'When usecase is called and repo returns a valid response '
+      'then the expected list is returned',
+      () async {
+        // arrange
+        Either<Failure, List<Country>> mockResponse = Right(mockCountryList);
+        when(repo.getCountryList()).thenAnswer((_) async => mockResponse);
 
-      // act
-      Either<Failure, List<Country>> result = await useCase.call();
+        // act
+        Either<Failure, List<Country>> result = await useCase.call();
 
-      // assert
-      expect(result.isRight(), true);
-      expect(globalState.countries, mockCountryList);
-    },
-  );
+        // assert
+        expect(result.isRight(), true);
+        expect(globalState.countries, mockCountryList);
+      },
+    );
+
+    test(
+      'When usecase is called and repo returns an invalid response '
+      'then a Failure is returned',
+      () async {
+        // arrange
+        Either<Failure, List<Country>> mockResponse =
+            left(Failure('some error'));
+        when(repo.getCountryList()).thenAnswer((_) async => mockResponse);
+
+        // act
+        Either<Failure, List<Country>> result = await useCase.call();
+
+        // assert
+        expect(result, mockResponse);
+      },
+    );
+  });
 }
