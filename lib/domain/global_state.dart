@@ -13,8 +13,8 @@ class GlobalState {
 
   int _nextPage = 0;
 
-  late List<Continent> continents;
-  late List<Country> countries;
+  List<Continent> continents = [];
+  List<Country> countries = [];
 
   void resetList({String continentId = ''}) {
     assert(
