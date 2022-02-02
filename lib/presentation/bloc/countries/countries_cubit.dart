@@ -2,8 +2,8 @@ import 'package:bloc/bloc.dart';
 import 'package:collection/collection.dart';
 import 'package:countries_gql/domain/models/country.dart';
 import 'package:countries_gql/domain/models/failure.dart';
-import 'package:countries_gql/domain/use_cases/fetch_countries_usecase.dart';
-import 'package:countries_gql/domain/use_cases/get_countries_next_page_usecase.dart';
+import 'package:countries_gql/domain/usecases/fetch_countries_usecase.dart';
+import 'package:countries_gql/domain/usecases/get_countries_next_page_usecase.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 
@@ -18,7 +18,8 @@ class CountriesCubit extends Cubit<CountriesState> {
   final FetchCountriesUseCase _fetchCountriesUseCase;
   final GetCountriesNextPageUseCase _getNextPageUseCase;
 
-  String _selectedId = '';
+  String _selectedCountryId = '';
+  String _selectedContinentId = '';
   List<Country> _countries = [];
 
   void fetchCountries({String continentId = ''}) async {
@@ -26,7 +27,10 @@ class CountriesCubit extends Cubit<CountriesState> {
     Either<Failure, List<Country>> result =
         await _fetchCountriesUseCase.call(continentId: continentId);
 
-    _selectedId = '';
+    if (_selectedContinentId != continentId) {
+      _selectedContinentId = continentId;
+      _selectedCountryId = '';
+    }
 
     result.fold(
       (Failure l) => emit(CountriesLoadFailed()),
@@ -46,12 +50,13 @@ class CountriesCubit extends Cubit<CountriesState> {
     assert(
       _countries.firstWhereOrNull((Country c) => c.id == countryId) != null,
     );
-    _selectedId = countryId;
+    _selectedCountryId = countryId;
     _emitLoaded();
   }
 
   void _emitLoaded() {
     emit(CountriesLoading());
-    emit(CountriesLoaded(countries: _countries, selectedId: _selectedId));
+    emit(
+        CountriesLoaded(countries: _countries, selectedId: _selectedCountryId));
   }
 }

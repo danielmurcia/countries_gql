@@ -1,9 +1,8 @@
-import 'package:countries_gql/data/mappers/continent%20mapper.dart';
+import 'package:countries_gql/data/mappers/continent_mapper.dart';
 import 'package:countries_gql/domain/models/country.dart';
 
 class CountryMapper {
-  // TODO should be injected
-  ContinentMapper _continentMapper = ContinentMapper();
+  final ContinentMapper _continentMapper = ContinentMapper();
 
   List<Country> mapCountries(List<dynamic> qglMaps) {
     return qglMaps.map((dynamic map) => mapCountry(map)).toList();

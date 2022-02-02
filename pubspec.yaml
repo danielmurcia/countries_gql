@@ -11,17 +11,19 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  dartz: ^0.10.1
   equatable: ^2.0.3
   flutter_bloc: ^8.0.1
   graphql: ^5.0.0
-  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   bloc_test: ^9.0.2
-  mockito: ^5.0.15
   build_runner: ^2.1.2
+  mockito: ^5.0.15
 
 # The following section is specific to Flutter.
 flutter:

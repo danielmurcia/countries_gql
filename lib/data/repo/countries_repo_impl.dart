@@ -1,7 +1,7 @@
 import 'package:countries_gql/data/gql/gql_client.dart';
 import 'package:countries_gql/data/gql/queries/continents_query.dart';
 import 'package:countries_gql/data/gql/queries/countries_query.dart';
-import 'package:countries_gql/data/mappers/continent%20mapper.dart';
+import 'package:countries_gql/data/mappers/continent_mapper.dart';
 import 'package:countries_gql/data/mappers/country_mapper.dart';
 import 'package:countries_gql/domain/models/continent.dart';
 import 'package:countries_gql/domain/models/country.dart';

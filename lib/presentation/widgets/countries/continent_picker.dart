@@ -32,6 +32,7 @@ class ContinentPicker extends StatelessWidget {
           Expanded(
             flex: 3,
             child: DropdownButton<String>(
+              key: Key('kDropdownButton'),
               value: state.selectedName,
               isExpanded: true,
               icon: const Icon(Icons.arrow_drop_down),
@@ -44,6 +45,7 @@ class ContinentPicker extends StatelessWidget {
               },
               items: [
                 DropdownMenuItem<String>(
+                  key: Key('kDropdownItem'),
                   value: 'All',
                   child: Text(
                     'All',

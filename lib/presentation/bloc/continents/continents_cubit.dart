@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:collection/collection.dart';
 import 'package:countries_gql/domain/models/continent.dart';
 import 'package:countries_gql/domain/models/failure.dart';
-import 'package:countries_gql/domain/use_cases/fetch_continents_usecase.dart';
+import 'package:countries_gql/domain/usecases/fetch_continents_usecase.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 
