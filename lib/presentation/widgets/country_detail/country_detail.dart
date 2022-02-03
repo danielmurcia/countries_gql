@@ -1,5 +1,4 @@
 import 'package:countries_gql/domain/models/country.dart';
-import 'package:countries_gql/presentation/common/fonts.dart';
 import 'package:flutter/material.dart';
 
 class CountryDetail extends StatelessWidget {
@@ -22,23 +21,23 @@ class CountryDetail extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(country.emoji, style: AppFonts.headline),
-            Text(country.name, style: AppFonts.headline),
+            Text(country.emoji, style: Theme.of(context).textTheme.headline1),
+            Text(country.name, style: Theme.of(context).textTheme.headline1),
             Text(
               'Native name: ${country.nativeName}',
-              style: AppFonts.bodyText1,
+              style: Theme.of(context).textTheme.bodyText1,
             ),
             Text(
               'Continent: ${country.continent.name}',
-              style: AppFonts.bodyText1,
+              style: Theme.of(context).textTheme.bodyText1,
             ),
             Text(
               'Capital: ${country.capital}',
-              style: AppFonts.bodyText1,
+              style: Theme.of(context).textTheme.bodyText1,
             ),
             Text(
               'Phone code: ${country.phoneCode}',
-              style: AppFonts.bodyText1,
+              style: Theme.of(context).textTheme.bodyText1,
             ),
           ],
         ),

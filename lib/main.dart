@@ -1,3 +1,4 @@
+import 'package:countries_gql/presentation/common/themes.dart';
 import 'package:countries_gql/presentation/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -11,11 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'GraphQL Countries client',
-      theme: ThemeData(
-        fontFamily: "SourceSansPro",
-        brightness: Brightness.light,
-        canvasColor: Colors.white,
-      ),
+      theme: appTheme(),
       home: HomeScreen(),
     );
   }

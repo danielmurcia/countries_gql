@@ -1,7 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:countries_gql/domain/models/continent.dart';
 import 'package:countries_gql/presentation/bloc/continents/continents_cubit.dart';
-import 'package:countries_gql/presentation/common/fonts.dart';
 import 'package:flutter/material.dart';
 
 class ContinentPicker extends StatelessWidget {
@@ -27,7 +26,10 @@ class ContinentPicker extends StatelessWidget {
         children: [
           Expanded(
             flex: 2,
-            child: Text('Continent: ', style: AppFonts.bodyText1),
+            child: Text(
+              'Continent: ',
+              style: Theme.of(context).textTheme.bodyText1,
+            ),
           ),
           Expanded(
             flex: 3,
@@ -49,7 +51,7 @@ class ContinentPicker extends StatelessWidget {
                   value: 'All',
                   child: Text(
                     'All',
-                    style: AppFonts.bodyText1,
+                    style: Theme.of(context).textTheme.bodyText1,
                   ),
                 ),
                 ...continents
