@@ -1,7 +1,7 @@
 import 'package:countries_gql/data/repo/countries_repo_impl.dart';
 import 'package:countries_gql/domain/global_state.dart';
 import 'package:countries_gql/domain/models/country.dart';
-import 'package:countries_gql/domain/repos/countries_repo.dart';
+import 'package:countries_gql/domain/repo/countries_repo.dart';
 import 'package:countries_gql/domain/usecases/fetch_continents_usecase.dart';
 import 'package:countries_gql/domain/usecases/fetch_countries_usecase.dart';
 import 'package:countries_gql/domain/usecases/get_countries_next_page_usecase.dart';

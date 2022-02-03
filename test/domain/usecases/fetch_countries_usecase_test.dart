@@ -1,7 +1,7 @@
 import 'package:countries_gql/domain/global_state.dart';
 import 'package:countries_gql/domain/models/country.dart';
 import 'package:countries_gql/domain/models/failure.dart';
-import 'package:countries_gql/domain/repos/countries_repo.dart';
+import 'package:countries_gql/domain/repo/countries_repo.dart';
 import 'package:countries_gql/domain/usecases/fetch_countries_usecase.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';

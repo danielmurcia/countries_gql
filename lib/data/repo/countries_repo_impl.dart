@@ -6,7 +6,7 @@ import 'package:countries_gql/data/mappers/country_mapper.dart';
 import 'package:countries_gql/domain/models/continent.dart';
 import 'package:countries_gql/domain/models/country.dart';
 import 'package:countries_gql/domain/models/failure.dart';
-import 'package:countries_gql/domain/repos/countries_repo.dart';
+import 'package:countries_gql/domain/repo/countries_repo.dart';
 import 'package:dartz/dartz.dart';
 import 'package:graphql/client.dart';
 
