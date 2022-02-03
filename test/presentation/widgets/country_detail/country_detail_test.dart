@@ -1,5 +1,3 @@
-import 'package:countries_gql/domain/models/continent.dart';
-import 'package:countries_gql/domain/models/country.dart';
 import 'package:countries_gql/presentation/widgets/country_detail/country_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

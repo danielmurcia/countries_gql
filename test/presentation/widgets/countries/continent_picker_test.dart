@@ -1,4 +1,3 @@
-import 'package:countries_gql/domain/models/continent.dart';
 import 'package:countries_gql/presentation/bloc/continents/continents_cubit.dart';
 import 'package:countries_gql/presentation/widgets/countries/continent_picker.dart';
 import 'package:flutter/material.dart';
