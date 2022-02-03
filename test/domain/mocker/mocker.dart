@@ -1,6 +1,6 @@
 import 'package:countries_gql/domain/models/continent.dart';
 import 'package:countries_gql/domain/models/country.dart';
-import 'package:countries_gql/domain/repos/countries_repo.dart';
+import 'package:countries_gql/domain/repo/countries_repo.dart';
 import 'package:mockito/annotations.dart';
 
 @GenerateMocks([CountriesRepository])
