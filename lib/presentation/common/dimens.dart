@@ -4,5 +4,4 @@ mixin AppDimens {
 
   // Screen size breakpoints
   static const tabletBreakpoint = 720.0;
-  static const desktopBreakpoint = 1440.0;
 }

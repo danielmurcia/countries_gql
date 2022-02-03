@@ -44,8 +44,14 @@ class _CountryListState extends State<CountryList> {
           Country c = widget.countries[i];
           return ListTile(
             onTap: () => widget.onSelect(c.id),
-            leading: Text(c.emoji),
-            title: Text(c.name),
+            leading: Text(
+              c.emoji,
+              style: Theme.of(context).textTheme.bodyText2,
+            ),
+            title: Text(
+              c.name,
+              style: Theme.of(context).textTheme.bodyText2,
+            ),
           );
         },
       ),
