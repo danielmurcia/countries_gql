@@ -1,5 +1,4 @@
 import 'package:countries_gql/domain/models/country.dart';
-import 'package:countries_gql/presentation/common/fonts.dart';
 import 'package:flutter/material.dart';
 
 class CountryDetail extends StatelessWidget {
