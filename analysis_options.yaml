@@ -1,0 +1,5 @@
+analyzer:
+  exclude:
+    - test/data/mocker/mocker.mocks.dart
+    - test/domain/mocker/mocker.mocks.dart
+    - test/presentation/mocker/mocker.mocks.dart
