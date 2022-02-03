@@ -25,6 +25,9 @@ flutter run
 
 Run all unit and widget tests available with the `flutter test` command
 
+## Continuous Integration
+Github actions have been [added to this project](.github/workflows/pr_ci.yml) to run some checks on every Pull Request.
+
 ## Design pattern and project structure
 Implemented a Domain-Driven Design (DDD) where the project is separated in three main architectural layers: Presentation, Domain and Data. With these we can make our code more testable, scalable and maintainable by setting all of the core logic and global state in the domain layer, and build both UI and data layers around it.
 
