@@ -81,6 +81,8 @@ In the **Data layer** is stored all of the implementation of repositories declar
 - mockito: ^5.0.15: Testing library
 - bloc_test: ^9.0.2": Unit testing for the BLoC library
 - build_runner: ^2.1.2: Code generator
+- injectable: ^1.5.3: Dependency injection library. Works alongside get_it.
+- get_it: ^7.2.0: Service Locator for Dart and Flutter projects
 
 ## About some decisions
 
