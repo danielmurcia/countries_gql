@@ -1,12 +1,8 @@
 import 'package:graphql/client.dart';
+import 'package:injectable/injectable.dart';
 
+@singleton
 class GqlClient {
-  // Setup GlobalState as Singleton
-  GqlClient._internal();
-  static final GqlClient _instance = GqlClient._internal();
-
-  static GqlClient get instance => _instance;
-
   final Link _link = HttpLink(
     'https://countries.trevorblades.com/graphql',
   );

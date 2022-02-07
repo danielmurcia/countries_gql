@@ -1,4 +1,3 @@
-import 'package:countries_gql/data/gql/gql_client.dart';
 import 'package:countries_gql/data/gql/queries/continents_query.dart';
 import 'package:countries_gql/data/gql/queries/countries_query.dart';
 import 'package:countries_gql/data/mappers/continent_mapper.dart';
@@ -9,15 +8,21 @@ import 'package:countries_gql/domain/models/failure.dart';
 import 'package:countries_gql/domain/repo/countries_repo.dart';
 import 'package:dartz/dartz.dart';
 import 'package:graphql/client.dart';
+import 'package:injectable/injectable.dart';
 
+@Injectable(as: CountriesRepository)
 class CountriesRepositoryImpl implements CountriesRepository {
-  /// Should be injected
-  final CountriesQuery _countriesQuery =
-      CountriesQuery(GqlClient.instance.client);
-  final ContinentsQuery _continentsQuery =
-      ContinentsQuery(GqlClient.instance.client);
-  final CountryMapper _countryMapper = CountryMapper();
-  final ContinentMapper _continentMapper = ContinentMapper();
+  CountriesRepositoryImpl(
+    this._countriesQuery,
+    this._continentsQuery,
+    this._countryMapper,
+    this._continentMapper,
+  );
+
+  final CountriesQuery _countriesQuery;
+  final ContinentsQuery _continentsQuery;
+  final CountryMapper _countryMapper;
+  final ContinentMapper _continentMapper;
 
   @override
   Future<Either<Failure, List<Continent>>> getContinentList() async {

@@ -5,9 +5,11 @@ import 'package:countries_gql/domain/models/failure.dart';
 import 'package:countries_gql/domain/usecases/fetch_continents_usecase.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
+import 'package:injectable/injectable.dart';
 
 part 'continents_state.dart';
 
+@injectable
 class ContinentsCubit extends Cubit<ContinentsState> {
   ContinentsCubit(this._useCase) : super(ContinentsLoading());
 

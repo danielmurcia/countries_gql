@@ -6,9 +6,11 @@ import 'package:countries_gql/domain/usecases/fetch_countries_usecase.dart';
 import 'package:countries_gql/domain/usecases/get_countries_next_page_usecase.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
+import 'package:injectable/injectable.dart';
 
 part 'countries_state.dart';
 
+@injectable
 class CountriesCubit extends Cubit<CountriesState> {
   CountriesCubit(
     this._fetchCountriesUseCase,

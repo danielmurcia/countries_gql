@@ -1,5 +1,7 @@
 import 'package:graphql/client.dart';
+import 'package:injectable/injectable.dart';
 
+@injectable
 class CountriesQuery {
   CountriesQuery(this._client);
 

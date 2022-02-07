@@ -17,6 +17,8 @@ dependencies:
   flutter_bloc: ^8.0.1
   graphql: ^5.0.0
   mockito: ^5.0.15
+  injectable: ^1.5.3
+  get_it: ^7.2.0
 
 dev_dependencies:
   flutter_test:
@@ -24,6 +26,7 @@ dev_dependencies:
 
   bloc_test: ^9.0.2
   build_runner: ^2.1.2
+  injectable_generator: ^1.4.1
 
 # The following section is specific to Flutter.
 flutter:

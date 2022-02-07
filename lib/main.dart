@@ -1,8 +1,10 @@
+import 'package:countries_gql/injection.dart';
 import 'package:countries_gql/presentation/common/themes.dart';
 import 'package:countries_gql/presentation/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  configureDependencies();
   runApp(MyApp());
 }
 

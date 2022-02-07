@@ -10,6 +10,7 @@ Flutter project displaying Countries data through a responsive master-detail flo
 ```
 flutter pub get
 flutter pub run build_runner build --delete-conflicting-outputs
+flutter packages pub run build_runner build --delete-conflicting-outputs
 ```
 5. Run the application!
  - To run on web and checkout the master-detail flow responsiveness:

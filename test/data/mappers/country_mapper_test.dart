@@ -1,3 +1,4 @@
+import 'package:countries_gql/data/mappers/continent_mapper.dart';
 import 'package:countries_gql/data/mappers/country_mapper.dart';
 import 'package:countries_gql/domain/models/country.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -10,7 +11,7 @@ void main() {
     'then the expected list is returned',
     () async {
       // arrange
-      CountryMapper mapper = CountryMapper();
+      CountryMapper mapper = CountryMapper(ContinentMapper());
 
       // act
       List<Country> result = mapper.mapCountries(mockCountriesQueryResponse);

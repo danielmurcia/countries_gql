@@ -1,16 +1,12 @@
 import 'package:collection/collection.dart';
 import 'package:countries_gql/domain/models/continent.dart';
 import 'package:countries_gql/domain/models/country.dart';
+import 'package:injectable/injectable.dart';
 
 const COUNTRIES_PER_PAGE = 25;
 
+@singleton
 class GlobalState {
-  // Setup GlobalState as Singleton
-  GlobalState._internal();
-  static final GlobalState _instance = GlobalState._internal();
-
-  static GlobalState get instance => _instance;
-
   int _nextPage = 0;
 
   List<Continent> continents = [];
