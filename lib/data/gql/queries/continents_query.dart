@@ -1,9 +1,12 @@
+import 'package:countries_gql/data/gql/gql_client.dart';
 import 'package:graphql/client.dart';
+import 'package:injectable/injectable.dart';
 
+@injectable
 class ContinentsQuery {
-  ContinentsQuery(this._client);
+  ContinentsQuery(this._gql);
 
-  final GraphQLClient _client;
+  final GqlClient _gql;
 
   Future<QueryResult> getContinents() async {
     final QueryOptions options = QueryOptions(
@@ -19,6 +22,6 @@ class ContinentsQuery {
       ),
     );
 
-    return await _client.query(options);
+    return await _gql.client.query(options);
   }
 }

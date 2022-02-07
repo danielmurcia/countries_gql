@@ -10,6 +10,7 @@ Flutter project displaying Countries data through a responsive master-detail flo
 ```
 flutter pub get
 flutter pub run build_runner build --delete-conflicting-outputs
+flutter packages pub run build_runner build --delete-conflicting-outputs
 ```
 5. Run the application!
  - To run on web and checkout the master-detail flow responsiveness:
@@ -80,8 +81,13 @@ In the **Data layer** is stored all of the implementation of repositories declar
 - mockito: ^5.0.15: Testing library
 - bloc_test: ^9.0.2": Unit testing for the BLoC library
 - build_runner: ^2.1.2: Code generator
+- injectable: ^1.5.3: Dependency injection library. Works alongside get_it.
+- get_it: ^7.2.0: Service Locator for Dart and Flutter projects
 
 ## About some decisions
+
+### Infinite scrolling pagination
+As the selected GQL API has no pagination feature for its calls, I decided to build one through containing the whole country list in domain's layer `GlobalState`, and returning the list paginated to the `CountriesCubit`, so the ListView only asks for countries as the user scrolls down.
 
 ### Why BLoC/Cubit for State Management?
 The use of Cubit State Management comes from personal experience, where all the state management logic goes apart from the Widget file, in a very simple, yet elegant way.

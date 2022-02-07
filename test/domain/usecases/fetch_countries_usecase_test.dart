@@ -17,7 +17,7 @@ void main() {
 
   setUpAll(() async {
     repo = MockCountriesRepository();
-    globalState = GlobalState.instance;
+    globalState = GlobalState();
     useCase = FetchCountriesUseCase(globalState, repo);
   });
 

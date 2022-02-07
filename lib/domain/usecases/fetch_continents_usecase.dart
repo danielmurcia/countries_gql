@@ -3,7 +3,9 @@ import 'package:countries_gql/domain/models/continent.dart';
 import 'package:countries_gql/domain/models/failure.dart';
 import 'package:countries_gql/domain/repo/countries_repo.dart';
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 
+@injectable
 class FetchContinentsUseCase {
   FetchContinentsUseCase(this._globalState, this._repository);
 
