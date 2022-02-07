@@ -58,6 +58,7 @@ In the **Data layer** is stored all of the implementation of repositories declar
     |   |   |-- bloc        // Widget state management cubits
     |   |   |-- common      // UI common definitions (fonts, themes, etc...)
     |   |   |-- widgets     // Contains different widgets that the HomeScreen uses
+    |   |-- injection.dart  // Get_it library initialization for dependecy injection
     |-- test                // Unit and Widget testing
         |-- data  
         |   |-- mappers     // Unit testing for GQL responses mapping functions
