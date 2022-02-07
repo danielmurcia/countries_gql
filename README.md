@@ -84,6 +84,9 @@ In the **Data layer** is stored all of the implementation of repositories declar
 
 ## About some decisions
 
+### Infinite scrolling pagination
+As the selected GQL API has no pagination feature for its calls, I decided to build one through containing the whole country list in domain's layer `GlobalState`, and returning the list paginated to the `CountriesCubit`, so the ListView only asks for countries as the user scrolls down.
+
 ### Why BLoC/Cubit for State Management?
 The use of Cubit State Management comes from personal experience, where all the state management logic goes apart from the Widget file, in a very simple, yet elegant way.
 
