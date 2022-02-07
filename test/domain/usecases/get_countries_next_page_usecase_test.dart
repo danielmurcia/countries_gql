@@ -10,7 +10,7 @@ void main() {
   late GetCountriesNextPageUseCase useCase;
 
   setUpAll(() async {
-    globalState = GlobalState.instance;
+    globalState = GlobalState();
     useCase = GetCountriesNextPageUseCase(globalState);
   });
 
